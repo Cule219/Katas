@@ -5,8 +5,11 @@ function numericals(s){
       let obj = {};
       let res = '';
       for(let i = 0; i < s.length; i++) {
-        obj[s[i]] ? obj[s[i]]++ : obj[s[i]] = 1;
+        obj[s[i]] = (obj[s[i]] || 0) + 1;
         res += obj[s[i]];
       }
       return res;
+
+    //   str.replace(/./g, char => 
+    //     obj[char] = (obj[char] || 0) + 1)
 }
